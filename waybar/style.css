@@ -1,0 +1,31 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Hack", monospace;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #1a1a1a;
+    color: #ffffff;
+    border-bottom: 1px solid #444444;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    background-color: #444444;
+}
+
+#network, #pulseaudio, #cpu, #temperature, #memory, #battery, #clock {
+    padding: 0 10px;
+    border-left: 1px solid #444444;
+}
+
+#temperature.critical {
+    color: #ff5555;
+}

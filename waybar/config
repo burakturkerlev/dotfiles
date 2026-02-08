@@ -1,0 +1,59 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": [],
+    "modules-right": [
+        "network", 
+        "pulseaudio", 
+        "cpu", 
+        "temperature", 
+        "memory", 
+        "battery", 
+        "clock"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "WORKSPACE {name}",
+        "on-click": "activate"
+    },
+
+    "network": {
+        "format-wifi": "WIFI: {essid} {signalStrength}%",
+        "format-ethernet": "ETH: {ifname}",
+        "format-disconnected": "OFFLINE"
+    },
+
+    "pulseaudio": {
+        "format": "VOL: {volume}%",
+        "format-muted": "MUTED"
+    },
+
+    "cpu": {
+        "format": "CPU: {usage}%",
+        "interval": 2
+    },
+
+    "temperature": {
+       "hwmon-path": "/sys/class/hwmon/hwmon6/temp1_input",
+       "critical-threshold": 80,
+       "format": "CPU: {temperatureC}°C"
+    },
+
+    "memory": {
+        "format": "RAM: {percentage}%",
+        "interval": 5
+    },
+
+    "battery": {
+    	"states": {
+        	"low": 25
+    	},
+    	"format": "BAT: {capacity}%",
+},
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M}",
+        "tooltip": false
+    }
+}
